@@ -1,12 +1,12 @@
-<?php 
+            </main><!-- #main -->
+        </div><!-- #primary -->
+    </div><!-- #content -->
+    
+    <?php get_template_part( 'template-parts/layout/footer' ); ?>
 
-//Affiche le menu "footer" enregistré au préalable.
+</div><!-- #page -->
 
-if ( has_nav_menu( 'footer-menu' ) ) : ?>
-<?php 
-wp_nav_menu ( array (
-'theme_location' => 'footer-menu' ,
-'menu_class' => 'the-footer-menu', // classe CSS pour customiser mon menu
-) ); ?>
-<?php endif;
-?>
+<?php wp_footer(); ?>
+
+</body>
+</html>
