@@ -1,5 +1,6 @@
 <header>
     <?php 
+    the_custom_logo();
     //Display header of site
     if ( has_nav_menu( 'header-menu' ) ) : ?>
         <?php 
