@@ -1,4 +1,5 @@
 <footer>
+    
     <?php 
     //Display footer of site
     if ( has_nav_menu( 'footer-menu' ) ) : ?>
