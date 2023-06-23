@@ -1,0 +1,45 @@
+header {
+    display: flex;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    
+    .custom-logo {
+      width: 216px;
+      height: 14px;
+      padding-left: 145px;
+    }
+    
+    .menu-header-container {
+      margin-left: auto;
+      
+      .the-header-menu {
+        display: flex;
+        
+        .menu-item {
+          list-style: none;
+          text-decoration: none;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          
+          &-5 {
+            padding-right: 45px;
+          }
+          
+          &-25 {
+            padding-right: 45px;
+          }
+          
+          &-24 {
+            padding-right: 145px;
+          }
+          
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+}

@@ -11,22 +11,27 @@
 
 get_header(); ?>
 
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-    $ID =  get_the_ID(); 
-    $references = (!empty(get_post_meta($ID,'references'))) ? get_post_meta($ID,'references')[0]: false;
-    ?>
-    
-        <h1>
-            <?php the_title(); ?>
-        </h1>
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <div class="margin">
+        <div class="custom-row">
+            <div class="custom-col-6 custom-d-flex custom-mt-auto">
+                <?php get_template_part( 'template-parts/single-photos_nathalie_mota/infos' ); ?>
+            </div>
+            <div class="custom-col-6">
+                <p>
+                    <?php the_content(); ?>
+                </p>
+            </div>
+        </div>
 
-        <p>
-            <?php the_content(); ?>
-        </p>
+        <div class="interested-thumbs-navigation">
+            <?php get_template_part( 'template-parts/single-photos_nathalie_mota/navigation' ); ?>
+        </div>
 
-        <?php echo $references; ?>
-
-
+        <div class="more-pictures">
+            <?php get_template_part( 'template-parts/single-photos_nathalie_mota/pictures' ); ?>
+        </div>
+    </div>
     <?php  endwhile; endif; ?>
 
 <?php get_footer();

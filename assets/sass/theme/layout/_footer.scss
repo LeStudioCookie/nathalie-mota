@@ -1,0 +1,30 @@
+footer {
+    border-top: 1px solid #000000;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    
+    .menu-footer-container {
+      .the-footer-menu {
+        display: flex;
+        justify-content: center;
+        
+        .menu-item {
+          list-style: none;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          
+          &-23 {
+            padding-left: 85px;
+            padding-right: 85px;
+          }
+          
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  

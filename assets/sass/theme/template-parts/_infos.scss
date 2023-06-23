@@ -1,0 +1,128 @@
+#page #content #primary #main .margin {
+    margin-right: 145px;
+    margin-left: 145px;
+}
+
+#page #content #primary #main .custom-row {
+    margin-top: 50px;
+}
+
+#page #content #primary #main .custom-row .custom-col-6 .title-h1 {
+    text-transform: uppercase;
+    font-family: Space Mono;
+    font-size: 66px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 58px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-bottom: 20px ;
+}
+
+#page #content #primary #main .custom-row .custom-col-6 p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    text-align: left;   
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+#page #content #primary #main .custom-row .custom-mt-auto { 
+    border-bottom : 1px solid black;
+}
+
+#page #content #primary #main .interested-thumbs-navigation {
+    display: flex;
+    justify-content: space-between;
+    
+    border-bottom: 1px solid black;
+    margin-top: 5px;
+    align-items: center;
+}
+
+#page #content #primary #main .interested-thumbs-navigation .interested {
+    display: flex;
+    align-items: center; 
+}
+
+
+#page #content #primary #main .interested-thumbs-navigation .interested .interested-picture {
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    letter-spacing: 0em;
+}
+
+#page #content #primary #main .interested-thumbs-navigation .interested .contact-link {
+    padding: 8px 15px;
+    border-radius: 2px;
+    height: 50px;
+    width: 272px;
+    border: none;
+    background: #D8D8D8;
+    font-family: 'Space Mono';
+    font-size: 12px;
+    margin-left: 33%;
+    
+    
+    
+}
+
+#page #content #primary #main .interested-thumbs-navigation .interested .interested-picture {
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    letter-spacing: 0em;
+}
+
+#page #content #primary #main .interested-thumbs-navigation .thumbs-navigation #thumbs { 
+    height: 71px;
+    width: 81px;
+}
+
+#page #content #primary #main .interested-thumbs-navigation .thumbs-navigation #thumbs .thumb img { 
+    height: 71px;
+    width: 81px;
+}
+
+#page #content #primary #main .interested-thumbs-navigation .thumbs-navigation #thumbs .thumb .previous-thumb { 
+    display: none;
+}
+
+#page #content #primary #main .interested-thumbs-navigation .thumbs-navigation #navigation a { 
+    text-decoration: none !important;
+}
+
+#page #content #primary #main .interested-thumbs-navigation .thumbs-navigation #navigation a img{ 
+    width: 25px;
+}
+
+#page #content #primary #main .interested-thumbs-navigation .thumbs-navigation #navigation a .next {
+    padding-left: 20px;
+}
+
+#page #content #primary #main .more-pictures .like {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+#page #content #primary #main .more-pictures .like p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+#page #content #primary #main .more-pictures .essai {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+

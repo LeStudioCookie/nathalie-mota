@@ -1,0 +1,208 @@
+// @include transition(.3s);
+@mixin transition($custom-speed){
+    -webkit-transition: all $custom-speed !important;
+    -moz-transition: all $custom-speed !important;
+    -o-transition: all $custom-speed !important;
+    transition: all $custom-speed !important;
+    -ms-transition: all $custom-speed !important;
+}
+// @include transition(.3s);
+@mixin transition-element($element,$custom-speed){
+    -webkit-transition: $element $custom-speed !important;
+    -moz-transition: $element $custom-speed !important;
+    -o-transition: $element $custom-speed !important;
+    transition: $element $custom-speed !important;
+    -ms-transition: $element $custom-speed !important;
+}
+// @include bg-cover();
+@mixin bg-cover(){
+    background-size: cover !important;
+    background-position: 50% !important;
+    background-repeat: no-repeat !important;
+}
+.custom-bg-cover{
+    @include bg-cover();
+    .column-image-bg{
+        @include bg-cover();
+    }
+}
+// @include bg-100();
+@mixin bg-100(){
+    background-size: 100% !important;
+    background-position: 50% !important;
+    background-repeat: no-repeat !important;
+}
+.custom-bg-100{
+    @include bg-100();
+    .column-image-bg{
+        @include bg-100();
+    }
+}
+// @include bg-contain();
+@mixin bg-contain(){
+    background-size: contain !important;
+    background-position: 50% !important;
+    background-repeat: no-repeat !important;
+}
+.custom-bg-contain{
+    @include bg-contain();
+    .column-image-bg{
+        @include bg-contain();
+    }
+}
+// @include border-radius(100px);
+@mixin border-radius($size){
+    height: $size;
+    width: $size;
+    border-radius: $size;
+    -webkit-border-radius: $size;
+    -moz-border-radius: $size;
+    -ms-border-radius: $size;
+    -o-border-radius: $size;
+}
+// @include border-radius-only(100px);
+@mixin border-radius-only($size){
+    border-radius: $size;
+    -webkit-border-radius: $size;
+    -moz-border-radius: $size;
+    -ms-border-radius: $size;
+    -o-border-radius: $size;
+}
+// @include flex-center();
+@mixin flex-center(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+// @include flex-column();
+@mixin flex-column(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+// @include scale(2);
+@mixin scale($size){
+    transform: scale($size);
+    -webkit-transform: scale($size);
+    -moz-transform: scale($size);
+    -ms-transform: scale($size);
+    -o-transform: scale($size);
+}
+// @include beforeafter();
+@mixin beforeafter(){
+    content:'';
+    display: block;
+}
+// @include boxshadow(10px 5px 5px);
+@mixin boxshadow($value){
+    box-shadow: $value $black;
+}
+// @include rotate(45deg);
+@mixin rotate($value){
+    transform: rotate($value);
+    -webkit-transform: rotate($value);
+    -moz-transform: rotate($value);
+    -ms-transform: rotate($value);
+    -o-transform: rotate($value);
+}
+@mixin thinkble-scrollbar {
+	&::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	&::-webkit-scrollbar-track {
+		border-radius: 8px;
+		-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 8px;
+		background: lighten($body_font_color, 50%);
+	}
+}
+@mixin generate-color($name,$color){
+    .color-#{$name}{
+        color: $color !important;
+    }
+    .background-color-#{$name}{
+        background-color: $color !important;
+    }
+    .border-color-#{$name}{
+        border-color: $color !important;
+    }
+    .fill-#{$name}{
+        fill: $color !important;
+    }
+    .stroke-#{$name}{
+        stroke: $color !important;
+    }
+}
+@mixin generate-border-color($name,$color){
+    .custom-border--#{$name} {
+        border: 1px solid $color !important
+    }
+    .custom-border-top--#{$name} {
+        border-top: 1px solid $color !important
+    }
+    .custom-border-right--#{$name} {
+        border-right: 1px solid $color !important
+    }
+    .custom-border-bottom--#{$name} {
+        border-bottom: 1px solid $color !important
+    }
+    .custom-border-left--#{$name} {
+        border-left: 1px solid $color !important
+    }
+}
+@mixin generate-variante-color($name,$rgb){
+    .color-#{$name}{
+        color: $rgb !important;
+    }
+    .background-color-#{$name}{
+        background-color: $rgb !important;
+    }
+    .border-color-#{$name}{
+        border-color: $rgb !important;
+    }
+    .stroke-#{$name}{
+        stroke: $rgb !important;
+    }
+}
+@keyframes move {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+@-webkit-keyframes rotate-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

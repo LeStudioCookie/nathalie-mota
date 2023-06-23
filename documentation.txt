@@ -1,0 +1,7 @@
+01 : coller tous les fichiers et dossiers dans le thème
+02 : ouvrir un terminal
+03 : taper : npm install
+04 : taper : gulp watch
+
+
+npm install -g gulp
