@@ -1,4 +1,4 @@
- document.querySelector('#navigation .previous').addEventListener('click', function() {
+ /document.querySelector('#navigation .previous').addEventListener('click', function() {
     window.history.back(); 
 });
 
@@ -26,4 +26,4 @@ $(document).ready(function() {
 
 
 previousLink.addEventListener('mouseover', getPreviousArticlePreview);
-nextLink.addEventListener('mouseover', getNextArticlePreview);
+nextLink.addEventListener('mouseover', getNextArticlePreview); 

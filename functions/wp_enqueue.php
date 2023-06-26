@@ -20,3 +20,11 @@ add_action( 'wp_enqueue_scripts', 'nathalie_mota_scripts' );
 
 
 add_theme_support( 'custom-logo' );
+
+function Add_ajaxurl()
+{
+    echo '<script type="text/javascript">
+           var ajaxurl = "' . admin_url('admin-ajax.php') . '";
+         </script>';
+}
+add_action('wp_head', 'Add_ajaxurl'); 

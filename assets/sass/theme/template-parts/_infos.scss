@@ -150,3 +150,14 @@
     bottom: 700px;
     left: 200px;
 }
+ .all-post {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.photos-list {
+    margin-left: 145px;
+    margin-right: 145px;
+}
+ 
