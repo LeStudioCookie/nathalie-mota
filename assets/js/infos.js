@@ -20,11 +20,10 @@ function getNextArticlePreview() {
   $('.previous-thumb').hide();
 }
 
+$(document).ready(function() {
+  $('.previous-thumb').hide();
+});
+
+
 previousLink.addEventListener('mouseover', getPreviousArticlePreview);
 nextLink.addEventListener('mouseover', getNextArticlePreview);
-
-
-
-
-
-

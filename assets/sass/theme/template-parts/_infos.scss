@@ -66,9 +66,6 @@
     font-family: 'Space Mono';
     font-size: 12px;
     margin-left: 33%;
-    
-    
-    
 }
 
 #page #content #primary #main .interested-thumbs-navigation .interested .interested-picture {
@@ -124,5 +121,20 @@
     gap: 20px;
 }
 
+.button { 
+    padding: 8px 15px 8px 15px;
+    width: 272px;
+    height: 50px;
+    border-radius: 2px;
+    background: #D8D8D8;
+    border: none;
+    font-weight: 400;
+    font-size: 12px;
+}
 
-
+.button1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

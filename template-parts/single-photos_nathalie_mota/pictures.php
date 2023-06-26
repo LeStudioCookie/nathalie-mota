@@ -9,6 +9,7 @@ $current_categories = wp_get_post_terms(get_the_ID(), 'categorie');
 $args = array(
     'post_type'      => 'photos_nathalie_mota', 
     'posts_per_page' => 2, 
+    'post__not_in' => [get_the_ID()],
     'tax_query'      => array(
         array(
             'taxonomy' => 'categorie', 
@@ -30,7 +31,9 @@ if ($query->have_posts()) {
 }
 ?>
 </div>
-
+<div class="button1">
+<button class="button">Toutes les photos</button>
+</div>
 
 
 

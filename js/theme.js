@@ -16,6 +16,9 @@ function getNextArticlePreview() {
   $('.next-thumb').show();
   $('.previous-thumb').hide();
 }
+$(document).ready(function () {
+  $('.previous-thumb').hide();
+});
 previousLink.addEventListener('mouseover', getPreviousArticlePreview);
 nextLink.addEventListener('mouseover', getNextArticlePreview);
 jQuery(document).ready(function ($) {
