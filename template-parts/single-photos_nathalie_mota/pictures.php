@@ -31,8 +31,9 @@ if ($query->have_posts()) {
 }
 ?>
 </div>
+
 <div class="button1">
-<button class="button">Toutes les photos</button>
+    <button class="button">Toutes les photos</button>
 </div>
 
 
