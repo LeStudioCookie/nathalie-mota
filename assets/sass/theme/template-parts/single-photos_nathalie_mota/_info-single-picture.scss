@@ -1,0 +1,31 @@
+//single-photos_nathalie_mota - infos-single-picture
+
+#page #content #primary #main .custom-row {
+    margin-top: 50px;
+}
+
+#page #content #primary #main .custom-row .custom-col-6 .title-h1 {
+    text-transform: uppercase;
+    font-family: Space Mono;
+    font-size: 66px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 58px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-bottom: 20px ;
+}
+
+#page #content #primary #main .custom-row .custom-col-6 p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    text-align: left;   
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+#page #content #primary #main .custom-row .custom-mt-auto { 
+    border-bottom : 1px solid black;
+}

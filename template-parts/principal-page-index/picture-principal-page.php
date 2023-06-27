@@ -1,5 +1,5 @@
 <section class="content-wrapper">
-    <div>
+    <div class="content-wrapper-img">
         <?php
         $query = new WP_Query(array('post_type' => 'photos_nathalie_mota', 'orderby' => 'rand', 'posts_per_page' => 1));
 

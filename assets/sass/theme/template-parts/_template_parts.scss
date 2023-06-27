@@ -1,1 +1,17 @@
-@import "infos";
+//index
+@import "principal-page-index";
+
+//template-parts/principal-page-index
+@import "principal-page-index/all-photos-list";
+@import "principal-page-index/picture-principal-page";
+
+//single-photos_nathalie_mota
+@import "single-photos_nathalie_mota/infos-single-picture";
+@import "single-photos_nathalie_mota/navigation-other-picture";
+@import "single-photos_nathalie_mota/similar-pictures";
+
+
+
+
+
+

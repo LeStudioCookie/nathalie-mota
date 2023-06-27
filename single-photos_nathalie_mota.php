@@ -15,7 +15,7 @@ get_header(); ?>
     <div class="margin">
         <div class="custom-row">
             <div class="custom-col-6 custom-d-flex custom-mt-auto">
-                <?php get_template_part( 'template-parts/single-photos_nathalie_mota/infos' ); ?>
+                <?php get_template_part( 'template-parts/single-photos_nathalie_mota/infos-single-picture' ); ?>
             </div>
             <div class="custom-col-6">
                 <p>
@@ -25,11 +25,11 @@ get_header(); ?>
         </div>
 
         <div class="interested-thumbs-navigation">
-            <?php get_template_part( 'template-parts/single-photos_nathalie_mota/navigation' ); ?>
+            <?php get_template_part( 'template-parts/single-photos_nathalie_mota/navigation-other-picture' ); ?>
         </div>
 
         <div class="more-pictures">
-            <?php get_template_part( 'template-parts/single-photos_nathalie_mota/pictures' ); ?>
+            <?php get_template_part( 'template-parts/single-photos_nathalie_mota/similar-pictures' ); ?>
         </div>
     </div>
     <?php  endwhile; endif; ?>
