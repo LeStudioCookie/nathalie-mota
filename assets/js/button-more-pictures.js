@@ -1,28 +1,35 @@
-document.getElementById('load-more-button').addEventListener('click', function(e){
-    var form_data = new FormData();
-    form_data.append('action', 'load_more');
-    form_data.append('offset', document.querySelectorAll('.all-post > .post').length);
+if (document.getElementById('load-more-button')) {
+    document.getElementById('load-more-button').addEventListener('click', function(e){ 
 
-    fetch(ajaxurl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Cache-Control': 'no-cache',
-        },
-        body: new URLSearchParams(form_data),
-    })
-    .then(response => {
-        if (response.status == 200) {
-            return response.text();
-        } else {
-            console.log('Error');
-            console.log(response);
-            return;
-        }
-    })
-    .then(data => {
-        var container = document.querySelector('.all-post');
-        container.innerHTML += data;
+        //Var
+        //let reg_company = document.getElementById('reg_company').value;
+        ///Etape 3 : recupérer la valeur de l'attribut data-page du bouton load-more-button = utiliser this
+        let paged = '1';
+
+        //ArayData
+        var form_data = new FormData();
+        form_data.append('paged', paged);
+       
+        //Send data
+        form_data.append('action', 'load_more');
+
+        fetch(ajaxurl, {
+            method: 'POST',
+            body: form_data,
+        })
+        .then(response => response.json())
+        .then(response => {
+
+            ///Etape 4 : si response.paged = false supp bouton
+
+            if (response.success) {
+                let posts = response.posts;
+                ///Etape 1 : Inserer dans la div .all-post les posts
+                /////modele qui ne fonctionne pas : document.querySelector('.all-post').insert(posts);
+                ///Etape 2 : changer la valeur de l'attribut data-page
+            }else{
+                console.log('error');
+            }
+        });
     });
-});
-
+}

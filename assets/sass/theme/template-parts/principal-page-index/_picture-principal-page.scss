@@ -1,13 +1,35 @@
 // Principal-page_index - picture-principal-page
 
-#page #content #primary #main .content-wrapper figure img {
-    width: 100%;
-    max-height: 962px;
- }
-
-.image-overlay {
-    bottom: 700px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+#page {
+    #content {
+      #primary {
+        #main {
+          .content-wrapper {
+            position: relative; 
+            .content-wrapper-img {
+              position: relative;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+                figure {
+                  width: 100%;
+                  img {
+                    width: 100%;
+                    max-height: 962px;
+                    object-fit: cover;
+                }
+              }
+            }
+          }
+  
+          .image-overlay {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+          }
+        }
+      }
+    }
+  }

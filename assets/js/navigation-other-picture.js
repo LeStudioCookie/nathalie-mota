@@ -1,13 +1,24 @@
-/*document.querySelector('#navigation .previous').addEventListener('click', function() {
-  window.history.back();
-});
+if (document.querySelector('#navigation .previous')) {
+  document.querySelector('#navigation .previous').addEventListener('click', function() {
+    window.history.back();
+  });
+}
 
-document.querySelector('#navigation .next').addEventListener('click', function() {
-  window.history.forward();
-});
+if (document.querySelector('#navigation .next')) {
+  document.querySelector('#navigation .next').addEventListener('click', function() {
+    window.history.forward();
+  });
+}
 
-const previousLink = document.querySelector('.previous-link');
-const nextLink = document.querySelector('.next-link');
+if (document.querySelector('.previous-link')) {
+  const previousLink = document.querySelector('.previous-link');
+  previousLink.addEventListener('mouseover', getPreviousArticlePreview);
+}
+
+if (document.querySelector('.next-link')) {
+  const nextLink = document.querySelector('.next-link');
+  nextLink.addEventListener('mouseover', getNextArticlePreview);
+}
 
 function getPreviousArticlePreview() {
   $('.previous-thumb').show();
@@ -20,8 +31,9 @@ function getNextArticlePreview() {
 }
 
 $(document).ready(function() {
-  $('.previous-thumb').hide();
+  if ($('.next-thumb').length === 0) {
+    getPreviousArticlePreview();
+  } else {
+    getNextArticlePreview();
+  }
 });
-
-previousLink.addEventListener('mouseover', getPreviousArticlePreview);
-nextLink.addEventListener('mouseover', getNextArticlePreview);*/

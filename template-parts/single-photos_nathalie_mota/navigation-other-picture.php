@@ -1,11 +1,12 @@
 <div class="interested">
-    <div class="">
-        <p class="interested-picture">Cette photo vous intéresse ? </p>
+    <div class="interested-picture">
+        <p class="interested-picture-more">Cette photo vous intéresse ? </p>
     </div>
 
-    <div class="">
+    <div class="interested-contact-link">
         <input class="contact-link contact-single" type="button" value="Contact">
     </div>
+
 </div>
 
 <?php 

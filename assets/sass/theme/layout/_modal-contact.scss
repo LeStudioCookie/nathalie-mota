@@ -1,79 +1,87 @@
-#modal-container .modal-background {
-  display: table-cell;
-  background: rgba(0, 0, 0, 0.6);
-  vertical-align: middle;
+#modal-container {
+  .modal-background {
+    display: table-cell;
+    background: rgba(0, 0, 0, 0.6);
+    vertical-align: middle;
+
+    .modal-content {
+      width: 600px;
+      height: 770px;
+      margin: auto;
+      background-color: #fff;
+      overflow: hidden;
+      border: 5px solid black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .modal-content-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        max-height: 100%;
+        overflow: auto;
+        overflow-x: hidden;
+        padding-top: 10px;
+
+        img {
+          max-width: 886px;
+          max-height: 106px;
+        }
+      }
+
+      .wpcf7 {
+        padding-top: 15px;
+
+        .wpcf7-form {
+          max-width: 269px;
+          label {
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 18px;
+          max-width: 269px;
+
+          .wpcf7-form-control-wrap {
+            .wpcf7-text {
+              width: 263px;
+              height: 40px;
+              border: 1px solid #B8BBC2;
+              border-radius: 8px;
+            
+            }
+          }
+
+            .wpcf7-textarea {
+              width: 263px;
+              border: 1px solid #B8BBC2;
+              border-radius: 8px;
+              resize: none;
+            }
+        }
+
+          .wpcf7-submit {
+            background: #D8D8D8;
+            box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.02);
+            border-radius: 2px;
+            width: 269px;
+            height: 50px;
+            border: none;
+            margin-top: 19px;
+            font-family: 'Space Mono';
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0em;
+          }
+        }
+      }
+    }
+  }
 }
 
-#modal-container .modal-background .modal-content {
-  width: 600px;
-  margin: auto;
-  background-color: #fff;
-  overflow: hidden;
-  border: 5px solid black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#modal-container .modal-background .modal-content .modal-content-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  max-height: 100%;
-  overflow: auto;
-  overflow-x: hidden;
-  padding-top: 18px;
-}
-
-#modal-container .modal-background .modal-content-image img {
-  max-width: 886px;
-  max-height: 106px;
-}
-
-#modal-container .modal-background .modal-content .wpcf7 {
-  padding-top: 47px;
-}
-
-#modal-container .modal-background .modal-content .wpcf7 .wpcf7-form {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  max-width: 269px;
-}
-
-#modal-container .modal-background .modal-content .wpcf7 .wpcf7-form .wpcf7-form-control-wrap .wpcf7-text {
-  width: 263px;
-  height: 40px;
-  border: 1px solid #B8BBC2;
-  border-radius: 8px;
-  margin-bottom: 25px;
-}
-
-#modal-container .modal-background .modal-content .wpcf7 .wpcf7-form .wpcf7-form-control-wrap .wpcf7-textarea { 
-  width: 263px;
-  height: 210px;
-  border: 1px solid #B8BBC2;
-  border-radius: 8px;
-  resize: none;
-}
-
-#modal-container .modal-background .modal-content .wpcf7 .wpcf7-form .wpcf7-submit { 
-  background: #D8D8D8;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.02);
-  border-radius: 2px;
-  width: 269px;
-  height: 50px;
-  border: none;
-  margin-top: 19px;
-  font-family: 'Space Mono';
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0em;
-}
 
 #modal-container {
   position: fixed;

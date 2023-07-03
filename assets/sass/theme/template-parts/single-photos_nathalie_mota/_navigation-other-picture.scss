@@ -1,70 +1,88 @@
 //single-photos_nathalie_mota - navigation-other-picture
 
-#page #content #primary #main .interested-thumbs-navigation {
-    display: flex;
-    justify-content: space-between;
+#page {
+    #content {
+      #primary {
+        #main {
+          .interested-thumbs-navigation {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid black;
+            margin-top: 10px;
+            padding-bottom: 5px;
+            align-items: center;
+  
+            .interested {
+              display: flex;
+              align-items: center;
+              width: 49%;
+              justify-content: space-between;
+  
+              .interested-picture {
+                .interested-picture-more {
+                  font-family: 'Poppins';
+                  font-size: 14px;
+                  font-weight: 300;
+                  line-height: 21px;
+                  letter-spacing: 0em;
+                }
+              }
+  
+              .interested-contact-link {
+                .contact-link {
+                  padding: 8px 15px;
+                  border-radius: 2px;
+                  height: 50px;
+                  width: 272px;
+                  border: none;
+                  background: #D8D8D8;
+                  font-family: 'Space Mono';
+                  font-size: 12px;
+                  transition: background-color 0.5s ease-in-out;
+
+                    &:hover {
+                      background-color: #FE5858;
+                      font-size: 16px;
+                      color: white;
+                    }
+                }
+              }
+            }
+  
+            .thumbs-navigation {
+              #thumbs {
+                height: 71px;
+                width: 81px;
+  
+                .thumb {
+                  img {
+                    height: 71px;
+                    width: 81px;
+                  }
+  
+                  .previous-thumb {
+                    display: none;
+                  }
+                }
+              }
+  
+              #navigation {
+                display: flex;
+                justify-content: space-between;
+                  a {
+                    text-decoration: none !important;
     
-    border-bottom: 1px solid black;
-    margin-top: 5px;
-    align-items: center;
-}
+                    img {
+                      width: 25px;
+                    }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
-#page #content #primary #main .interested-thumbs-navigation .interested {
-    display: flex;
-    align-items: center; 
-}
+  
 
-
-#page #content #primary #main .interested-thumbs-navigation .interested .interested-picture {
-    font-family: 'Poppins';
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 21px;
-    letter-spacing: 0em;
-}
-
-#page #content #primary #main .interested-thumbs-navigation .interested .contact-link {
-    padding: 8px 15px;
-    border-radius: 2px;
-    height: 50px;
-    width: 272px;
-    border: none;
-    background: #D8D8D8;
-    font-family: 'Space Mono';
-    font-size: 12px;
-    margin-left: 33%;
-}
-
-#page #content #primary #main .interested-thumbs-navigation .interested .interested-picture {
-    font-family: 'Poppins';
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 21px;
-    letter-spacing: 0em;
-}
-
-#page #content #primary #main .interested-thumbs-navigation .thumbs-navigation #thumbs { 
-    height: 71px;
-    width: 81px;
-}
-
-#page #content #primary #main .interested-thumbs-navigation .thumbs-navigation #thumbs .thumb img { 
-    height: 71px;
-    width: 81px;
-}
-
-#page #content #primary #main .interested-thumbs-navigation .thumbs-navigation #thumbs .thumb .previous-thumb { 
-    display: none;
-}
-
-#page #content #primary #main .interested-thumbs-navigation .thumbs-navigation #navigation a { 
-    text-decoration: none !important;
-}
-
-#page #content #primary #main .interested-thumbs-navigation .thumbs-navigation #navigation a img{ 
-    width: 25px;
-}
-
-#page #content #primary #main .interested-thumbs-navigation .thumbs-navigation #navigation a .next {
-    padding-left: 20px;
-}

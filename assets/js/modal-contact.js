@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
       $('body').addClass('modal-active');
 
       let reference = $('.reference').attr('data-reference');
-      $('.form-reference').find('input').val(reference);
+       $('.form-reference').find('input').val(reference);
 
     })
     

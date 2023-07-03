@@ -11,11 +11,9 @@
             wp_reset_postdata();
         endif;
         ?>
-    </div>
-
-
-    <div class="image-overlay" style="position:relative; z-index:1;">
-        <img class="overlay-image" src="<?php echo get_template_directory_uri(); ?>/assets/title-header.png" alt="Title header">
+        <div class="image-overlay">
+            <img class="overlay-image" src="<?php echo get_template_directory_uri(); ?>/assets/title-header.png" alt="Title header">
+        </div>
     </div>
 </section>
 

@@ -14,10 +14,10 @@ get_header(); ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <div class="margin">
         <div class="custom-row">
-            <div class="custom-col-6 custom-d-flex custom-mt-auto">
+            <div class="custom-info custom-mt-auto">
                 <?php get_template_part( 'template-parts/single-photos_nathalie_mota/infos-single-picture' ); ?>
             </div>
-            <div class="custom-col-6">
+            <div class="custom-picture">
                 <p>
                     <?php the_content(); ?>
                 </p>
