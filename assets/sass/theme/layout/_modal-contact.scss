@@ -147,4 +147,51 @@
   }
 }
 
+
+//Mobile 
+@media (max-width: 768px) {
+  #modal-container {
+    .modal-background {
+      .modal-content {
+        width: 286px;
+        height: 650px;
+     
+        .modal-content-image {
+          img {
+            max-width: 460px;
+            max-height: 55px;
+          }
+        }
+  
+        .wpcf7 {
+          padding-top: 0px !important;
+  
+          .wpcf7-form {
+            max-width: 190px;
+            label {
+              .wpcf7-form-control-wrap {
+                .wpcf7-text {
+                  width: 190px;
+                  height: 40px;
+                }
+              }
+  
+              .wpcf7-textarea {
+                width: 190px;
+                height: 149px;
+              }
+            }
+  
+            .wpcf7-submit {
+              width: 190px;
+              height: 50px;
+              margin-top: 10px;
+            }
+            
+          }
+        }
+      }
+    }
+  }
+}
  

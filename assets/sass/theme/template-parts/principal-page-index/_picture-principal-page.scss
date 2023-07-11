@@ -33,3 +33,20 @@
       }
     }
   }
+
+//Mobile 
+@media (max-width: 768px) {
+  #page {
+    #content {
+      #primary {
+        #main {
+          .image-overlay {
+            img {
+              width: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,3 +4,11 @@
     margin-right: 145px;
     margin-left: 145px;
 }
+
+//Mobile
+@media (max-width: 768px) {
+    #page #content #primary #main .margin {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+}
