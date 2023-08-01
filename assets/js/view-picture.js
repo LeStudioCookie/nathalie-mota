@@ -1,7 +1,8 @@
-$( ".item .view .ico" ).on( "mouseover", function() {
+$('body').delegate('.item .view .ico','mouseenter', function( event ) {
     let bottomView = $(this).closest('.wrapper-hover').find('.bottom-view');
-    bottomView.addClass('active'); 
-}).on( "mouseout", function() {
+    bottomView.addClass('active');  
+});
+$('body').delegate('.item .view .ico','mouseout', function( event ) {
     let bottomView = $(this).closest('.wrapper-hover').find('.bottom-view');
     bottomView.removeClass('active');
-  } );                   
+});

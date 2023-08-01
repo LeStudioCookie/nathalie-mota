@@ -52,6 +52,92 @@
     }
 }
 
+#page {
+  #content {
+    #primary {
+      #main {
+        .custom-row {
+          .custom-picture {
+            .item {
+              position: relative;
+              .wrapper-hover {
+                opacity: 0;
+                @include transition(.3s);
+                .overlay {
+                  position: absolute; 
+                  top:0;
+                  left:0;
+                  width: 100%;
+                  height: 100%;
+                  background: black;
+                  opacity: 0.8;
+                }
+                .view {
+                  position: absolute; 
+                  top:0;
+                  left:0;
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  .ico {
+                    background-image :url('../assets/img/eye.png') ;
+                    @include bg-contain();
+                    height: 50px;
+                    width: 50px;
+                    position: absolute;
+                  }
+                  
+                }
+                .bottom-view {
+                  position:absolute;
+                  display: flex;
+                  justify-content: space-between;
+                  bottom: 10px;
+                  width: 100%;
+                  @include transition(.3s);
+                  opacity: 0;
+                  .reference-view {
+                    padding-left: 10px;
+                    color : #ffffff;
+                    font-family: 'poppins';
+                    font-size: 14px;
+                    line-height: 21px;
+                  }
+                  .categorie-view {
+                    padding-right: 10px;
+                    color : #ffffff;
+                  }
+                  &.active {
+                    opacity: 1;
+                  }
+                }
+                .full-screen{
+                  position: absolute;
+                  right: 10px;
+                  top: 10px;
+                  height: 25px;
+                  width: 25px;
+                  background-image :url('../assets/img/full-screen.svg') ;
+                  @include bg-contain();
+                }
+                
+              }
+              &:hover {
+                .wrapper-hover {
+                  opacity: 1;
+                }
+          }
+          
+        }
+      }
+    }
+  }
+}}}
+
+
+//Mobile
 @media (max-width: 768px){
   #page {
     #content {

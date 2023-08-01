@@ -10,14 +10,20 @@ function load_more_(){
     $selectedCategory = $_POST['selectedCategory'];
     $selectedFormats = $_POST['selectedFormats'];
     $selectedTrier = $_POST['selectedTrier'];
+    $postPerPage = $_POST['postPerPage'];
+    $postNotIn = $_POST['postNotIn'];
 
     $current_categories = get_terms(array('taxonomy' => 'categorie', 'hide_empty' => false));
 
     $args = array(
         'post_type'      => 'photos_nathalie_mota',
-        'posts_per_page' => 4,
-        'paged'          => 1,
+        'posts_per_page' => $postPerPage,
+        'paged'          => $paged,
     );
+
+    if ($postNotIn != '') {
+        $args['post__not_in'] =  [$postNotIn];
+    }
 
     if ($selectedTrier != '') {
         $args['orderby'] = 'date';
@@ -60,10 +66,9 @@ function load_more_(){
 
     $query = new WP_Query($args);
     $max_num_pages = $query->max_num_pages;
-    ///If max atteind $response['paged'] = false;
-    ///sinon $response['paged'] = true;
-
-    ob_start();
+    if ($paged == $max_num_pages)  {$response['paged'] = true;} else {$response['paged'] = false;};
+    
+  ob_start();
     if ($query->have_posts()) {
         while ($query->have_posts()) {
            ?> <?php $query->the_post(); ?>

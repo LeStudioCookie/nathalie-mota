@@ -18,9 +18,15 @@ get_header(); ?>
                 <?php get_template_part( 'template-parts/single-photos_nathalie_mota/infos-single-picture' ); ?>
             </div>
             <div class="custom-picture">
-                <p>
-                    <?php the_content(); ?>
-                </p>
+                
+                <?php
+                    get_template_part( 'template-parts/posts/item-photos', null,
+                        array( 
+                        'ID' => get_the_ID(),
+                        )
+                    );
+                ?>           
+                
             </div>
         </div>
 

@@ -1,4 +1,4 @@
-<header>
+<header id="header">
     <?php 
     the_custom_logo();
     if ( has_nav_menu( 'header-menu' ) ) :

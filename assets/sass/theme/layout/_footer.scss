@@ -29,18 +29,18 @@ footer {
   }
 
 //Mobile
-  @media (max-width: 768px) {
-    footer {
-      padding-top: 30px;
-      padding-bottom: 30px;
-      
-      .menu-footer-container {
-        .the-footer-menu {
-          display: grid;
-          grid-template-columns: 1fr;
-          justify-items: center;
-          gap: 30px;
-          padding-left: 0;
+@media (max-width: 768px) {
+  footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+    .menu-footer-container {
+      .the-footer-menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 30px;
+        padding-left: 0;
       }
     }
   }

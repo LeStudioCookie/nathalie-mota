@@ -2,7 +2,8 @@
 $current_categories = wp_get_post_terms(get_the_ID(), 'categorie');
 $args = array(
     'post_type'      => 'photos_nathalie_mota', 
-    'posts_per_page' => 4, 
+    'posts_per_page' => 2, 
+    'orderby'        => 'title',
     'post__not_in' => [get_the_ID()],
     'tax_query'      => array(
         array(
@@ -20,8 +21,8 @@ $photos = get_posts($args);
     <div class="like">
         <p>Vous aimerez aussi</p>
     </div>
-
-    <div class="essai">
+<div id="categorie-similar" data-id="<?php echo get_the_ID();?>" data-value="<?php echo get_the_terms($photos[0]->ID,'categorie')[0]->name; ?>"> </div>
+    <div class="essai all-post">
         <?php foreach($photos as $photo): ?>
                                 <?php $categorie = get_the_terms($photo->ID,'categorie')[0]->name;?>
                                 <?php $post_thumbnails_ID = (get_post_meta($photo->ID,'post-thumbnails'))?  get_post_meta($photo->ID,'post-thumbnails')[0]: ''; ?>
@@ -46,7 +47,7 @@ $photos = get_posts($args);
     </div>
 
     <div class="button-2-more">
-        <button class="button-2">Toutes les photos</button>
+        <button id="load-more-button" class="button-2" data-page="1">Toutes les photos</button>
     </div>
 
 <?php else: ?>

@@ -1,36 +1,53 @@
-<div class="trier">
-    <div class="trier-cat-form">
-        <select name="Cat" id="categorie" >
-            <option class = "uppercase" value="">Catégories</option>
-            <?php
-    $categories = get_terms('categorie');
-
-    foreach ($categories as $category) {
-        if ($category->name !== 'categorie') {
-            echo '<option class="design" value="' . $category->slug . '">' . $category->name . '</option>';
-        }
-    }
-    ?>
-        </select>
-
-        <select name="form" id="format">
-            <option value="">Formats</option>
-            <?php
-            $formats = get_terms('format');
+<div class="select"> 
+    <div class="select-categorie-format">  
+        <div class="dropdown dropdown-category">
+            <div class="dropbtn">
+                <div id="dropbtn-select" class="dropbtn-select">Catégories</div>
+                <div class="dropbtn-img"></div>
+            </div>
             
-            foreach ($formats as $format) {
-                echo '<option value="' . $format->slug . '">' . $format->name . '</option>';
-            }
+            <div class="dropdown-content dropdown-content-hide">
+            <?php
+                $categories = get_terms('categorie');
+
+                foreach ($categories as $category) {
+                    if ($category->name !== 'categorie') {
+                        echo '<div class="item" data-slug="'.$category->slug.'"> ' . $category->name . '</div>';
+                    }
+                }
             ?>
-        </select>
+            </div>
+        </div>
+
+        <div class="dropdown dropdown-formats">
+            <div class="dropbtn">
+                <div class="dropbtn-select">Format</div>
+                <div class="dropbtn-img"></div>
+            </div>
+
+            <div class="dropdown-content">
+                <?php
+                    $formats = get_terms('format');
+                    
+                    foreach ($formats as $format) {
+                        if ($format->name !== 'format') {
+                        echo '<div class="item" data-slug="'.$format->slug.'"> ' . $format->name . '</div>';
+                        }       
+                    }
+                ?>
+            </div>
+        </div>
     </div>
 
-    <div class="trier-select">
-        <select name="select" id="trier">
-            <option value="">Trier part</option>
-            <option value="DESC">Date décroissante</option>
-            <option value="ASC">Date croissante</option>
-        </select>
+    <div class="dropdown dropdown-trier">
+        <div class="dropbtn">
+            <div class="dropbtn-select">Trier par</div>
+            <div class="dropbtn-img"></div>
+        </div>
+        <div class="dropdown-content">
+            <div class="item" data-slug="Photos anciennes">Photos anciennes</div>
+            <div class="item" data-slug="Photos récentes">Photos récentes</div>
+        </div>
     </div>
 </div>
 
@@ -39,14 +56,21 @@
                 <?php
                     $current_categories = get_terms(array('taxonomy' => 'categorie', 'hide_empty' => false));
 
+
+                    $is_mobile = false;
+                    if (in_array('is-mobile', get_body_class())) {
+                        $is_mobile = true;
+                    }
+
+                    $posts_per_page = $is_mobile ? 8 : 12;
+
                     $args = array(
                         'post_type'      => 'photos_nathalie_mota',
-                        'posts_per_page' => 12,
+                        'posts_per_page' => $posts_per_page,
                         'orderby' => 'title',
+                        'paged'          => 1, 
                     );
                     
-
-
                     $query = new WP_Query($args);
 
                     if ($query->have_posts()) {
