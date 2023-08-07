@@ -24,25 +24,16 @@ $photos = get_posts($args);
 <div id="categorie-similar" data-id="<?php echo get_the_ID();?>" data-value="<?php echo get_the_terms($photos[0]->ID,'categorie')[0]->name; ?>"> </div>
     <div class="essai all-post">
         <?php foreach($photos as $photo): ?>
-                                <?php $categorie = get_the_terms($photo->ID,'categorie')[0]->name;?>
-                                <?php $post_thumbnails_ID = (get_post_meta($photo->ID,'post-thumbnails'))?  get_post_meta($photo->ID,'post-thumbnails')[0]: ''; ?>
-                                <?php $references = (get_post_meta($photo->ID,'references'))?  get_post_meta($photo->ID,'references')[0]: ''; ?>
-                                <a class="item" href="<?php echo wp_get_attachment_url($post_thumbnails_ID); ?>" data-lightbox="photos" data-title="<span><?php echo $references; ?></span><span><?php echo $categorie; ?></span>">
-                                    <figure class="wp-block-image size-large"><?php echo wp_get_attachment_image($post_thumbnails_ID, 'full'); ?></figure>
-                                    <div class="wrapper-hover">
-                                        <div class="overlay"></div>
-                                        <div class="full-screen"></div>
-                                        <div class="view"><div class="ico"></div></div>
-                                        <div class="bottom-view">
-                                            <div class="reference-view" >
-                                            <?php echo $references; ?>
-                                            </div>
-                                            <div class="categorie-view">
-                                                <?php echo $categorie; ?>
-                                            </div>
-                                        </div>
-                                    </div>   
-                                </a>
+            <?php $categorie = get_the_terms($photo->ID,'categorie')[0]->name;?>
+            <?php $post_thumbnails_ID = (get_post_meta($photo->ID,'post-thumbnails'))?  get_post_meta($photo->ID,'post-thumbnails')[0]: ''; ?>
+            <?php $references = (get_post_meta($photo->ID,'references'))?  get_post_meta($photo->ID,'references')[0]: ''; ?>
+            <?php
+                get_template_part( 'template-parts/posts/item-photos', null,
+                    array( 
+                    'ID' => $photo->ID,
+                    )
+                );
+            ?>            
         <?php endforeach; ?>
     </div>
 

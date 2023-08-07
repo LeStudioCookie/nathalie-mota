@@ -13,9 +13,9 @@
 $next_post = get_next_post();
 $prev_post = get_previous_post();
 
-$is_mobile = wp_is_mobile(); // Vérifie si l'utilisateur accède depuis un appareil mobile
+$is_mobile = wp_is_mobile(); 
 
-if (!$is_mobile) { // Vérifie si ce n'est pas un appareil mobile
+if (!$is_mobile) { 
     ?>
     <div class="thumbs-navigation">
         <div id="thumbs">
